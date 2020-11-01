@@ -2,10 +2,8 @@ package sun.woong.practice.domain;
 
 import java.util.List;
 
-public class MenuItemRepository {
+import org.springframework.data.repository.CrudRepository;
 
-	public List<MenuItem> findAllByRestaurantId(Long id) {
-		return null;
-	}
-
+public interface MenuItemRepository extends CrudRepository<MenuItem, Long> {
+	List<MenuItem> findAllByRestaurantId(Long restaurantId);
 }
